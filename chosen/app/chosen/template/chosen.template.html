@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="feature">
+        <span class="chosenItems" 
+            ng-repeat="chosen in config track by $index"
+            ng-if="chosen.chosenStatus === true">
+            <span>{{chosen.text}} </span>
+            <span class="cursorpointer closebutton" 
+                title="Clear!" 
+                ng-click="closeChosen(config.indexOf(chosen))">&#10006;
+            </span>
+        </span>
+        <span>
+            <input class="search" type="text" 
+                placeholder="Search Here!" 
+                ng-model="search"
+                ng-change="inputChange()"
+                ng-focus="inputFocus()"
+                ng-blur="inputBlur($event)"
+                ng-disabled="warningVisible">
+        </span>
+    </div>
+    <div ng-if="dropDownVisible" class="dropme">
+        <div class="dropDownItem cursorpointer"
+            ng-repeat="option in options | filter:search track by $index" 
+            ng-click="setChosen(option)"
+            ng-mousedown="dropDownPressed()">
+            <span class="dropmetext">{{option}}</span>
+        </div>
+    </div>
+
+</div>
