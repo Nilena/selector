@@ -1,0 +1,36 @@
+<div class="form-group col-md-4">
+
+        <label for="Selector">Single Selector:</label>
+        <select id="selector" class="form-control">
+          <option selected>Choose any of the item</option>
+          <option ng-model="value" ng-repeat="item in data.items">{{item}}</option>
+        </select>
+</div>
+<div class="form-group col-md-4">
+        <label for="Selector">Multi-Selector:</label>
+          <div  class="form-control" ng-click="show(id)"> 
+
+            <span id="selector" ng-hide="countVal>0"> Choose an Item</span> 
+          
+            <span ng-hide="countVal>0" id="arrow" class="material-icons">arrow_drop_down</span>
+            <span ng-show="countVal>0">{{countVal}} selected</span>
+            <br>
+
+          </div>
+          <span ng-show="showValue==true" >
+            <div class="dropdown">
+              <input type="text" class="form-control" ng-model="SearchText" ng-change="search()" placeholder="search">
+              {{message}}
+                <a id ="btn" class="form-control" ng-click="clearAll()">Reset</a>
+                <a id ="btn" class="form-control" ng-click="selectall()"> Check all</a>
+                <div id= "list" class="form-control " 
+                      ng-repeat="item_multi in data1.items | filter:SearchText" 
+                         ng-click="toggleSelection(data1.items.indexOf(item_multi))">
+                    <input type="checkbox"  ng-model="item_multi.status"> {{item_multi.value}} 
+                    {{item_multi.status}}
+                </div>  
+            </div>
+          
+          </span>      
+  </div>
+

@@ -1,0 +1,29 @@
+#btn{
+    cursor: pointer;
+    text-align: center;
+    color:blue;
+}
+
+.material-icons{
+    text-align:end !important;
+    color:black;
+    top: 350px;
+}
+.dropdown{
+    /* background-color:red; */
+    border: 1px;
+    padding: 5px;
+    color: blue;
+    border: 2px solid grey;
+}
+#list{
+    text-align: left;
+}
+#arrow{
+    float: right;
+    cursor:  context-menu;
+}
+
+#selector{
+cursor:  context-menu;
+}

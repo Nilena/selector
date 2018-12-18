@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Selector</title>
+	<script src="node_modules/angular/angular.min.js"></script>
+	<script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src=""></script>
+</head>
+	<body>
+        <div ng-app="selector" ng-controller="selectorCntrl">
+             <h4>Selector</h4>
+			 <selector-dir data="singleSelector" data1="multiselector"></selector-dir>
+			 <!-- <selector-dir data="multiselector"></selector-dir> -->
+			
+        </div>
+
+	</body>
+	<script src="app/app.js"></script>
+	<script src="app/constant.js"></script>
+	<script src="app/selector/controllers/selectorCntrl.js"></script>
+    <script src="app/selector/directives/selectorDir.js"></script>
+	
+</html>
